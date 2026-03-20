@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Sudhir",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 100,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-tm1637-7segment",
+      "id": "sevseg",
+      "top": 0,
+      "left": 220,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "pico:GP0",   "sevseg:CLK", "green",  [] ],
+    [ "pico:GP1",   "sevseg:DIO", "yellow", [] ],
+    [ "pico:3V3",   "sevseg:VCC", "red",    [] ],
+    [ "pico:GND.1", "sevseg:GND", "black",  [] ]
+  ],
+  "dependencies": {}
+}
